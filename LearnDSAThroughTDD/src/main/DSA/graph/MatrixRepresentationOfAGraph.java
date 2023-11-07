@@ -29,7 +29,6 @@ public class MatrixRepresentationOfAGraph {
     static void adjacencyMatrixOfAGraphWithMap(){
         int[][] graph = {{0,3}, {1,2},{1,5}, {2,4},{5,0},{5,4}, {5,3}};
         int n = graph.length;
-        int adjacencyMatrix[][] = new int[n][n];
         Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
         for (int i = 0; i < n; i++) {
             int a = graph[i][0], b = graph[i][1];

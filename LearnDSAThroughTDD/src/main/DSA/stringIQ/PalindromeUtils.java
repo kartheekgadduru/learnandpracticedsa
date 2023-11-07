@@ -17,16 +17,10 @@ public class PalindromeUtils {
     }
 
     private static boolean isPalindrome(String str) {
-        if(str.isEmpty()){
-            return false;
-        }
-        int start = 0, end = str.length() -1;
-        while(start <= end){
-            if(str.charAt(start) != str.charAt(end)){
+        int left = 0, right = str.length() -1;
+        while(left <= right){
+            if(str.charAt(left++) != str.charAt(right--)){
                 return false;
-            }else{
-                start+=1;
-                end-=1;
             }
         }
         return true;
@@ -37,13 +31,11 @@ public class PalindromeUtils {
         if(str.isEmpty()){
             return 1;
         }
-        int start = 0, end = str.length() -1, count = 0;
-        while(start <= end){
-            if(str.charAt(start) != str.charAt(end)){
+        int left = 0, right = str.length() -1, count = 0;
+        while(left <= right){
+            if(str.charAt(left++) != str.charAt(right--)){
                 count+=1;
             }
-            start+=1;
-            end-=1;
         }
         return count;
     }
