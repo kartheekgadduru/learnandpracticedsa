@@ -8,8 +8,20 @@ import java.util.stream.Collectors;
 
 public class TestReverse {
     public static void main(String[] args) {
-        String s = "kart";
-        int[] num = {1,2,-9,12,98,20,13,7,8,9};
+        /*String s = "kart";*/
+        //int[] num = {1,2,-9,12,98,20,13,7,8,9};
+        int[][] array = {{1,2,4}, {3,3,1}};
+
+        PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> Integer.compare(o1[0], o2[0]));
+
+        for (int[] row : array) {
+            pq.add(row);
+        }
+        while (pq.size() > 0) {
+            int[] poll = pq.poll();
+            //System.out.println(poll[poll.length -1]);
+            System.out.println(Arrays.toString(poll));
+        }
     }
 
     public String addBinary(String a, String b) {
@@ -47,7 +59,6 @@ public class TestReverse {
             }
 
         }
-
         Collections.sort(list);
         return list;
     }

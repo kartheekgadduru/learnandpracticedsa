@@ -1,11 +1,6 @@
 package main.designpatterns.singleton;
 
-import main.bank.Employee;
-import sun.jvm.hotspot.tools.FinalizerInfo;
-
-import java.lang.reflect.Constructor;
 import java.util.*;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class MainClass {
     public static void main(String[] args) {

@@ -8,7 +8,7 @@ import java.util.Map;
 public class MatrixRepresentationOfAGraph {
     public static void main(String[] args) {
         //adjacencyMatrixOfAGraph();
-        adjacencyMatrixOfAGraphWithMap();
+        adjacencyListOfAGraphWithMap();
     }
     static void adjacencyMatrixOfAGraphWithArray(){
         int[][] graph = {{0,3}, {1,2},{1,5}, {2,4},{5,0},{5,4}};
@@ -26,7 +26,7 @@ public class MatrixRepresentationOfAGraph {
         }
 
     }
-    static void adjacencyMatrixOfAGraphWithMap(){
+    static void adjacencyListOfAGraphWithMap(){
         int[][] graph = {{0,3}, {1,2},{1,5}, {2,4},{5,0},{5,4}, {5,3}};
         int n = graph.length;
         Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();

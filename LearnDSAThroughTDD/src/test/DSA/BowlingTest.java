@@ -1,15 +1,16 @@
 package test.DSA;
 
 import main.DSA.Game;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BowlingTest {
     private Game game;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception{
         game = new Game();
     }
@@ -21,7 +22,7 @@ public class BowlingTest {
     }
 
 
-    @Test
+  @Test
     public void gutterGame(){
         roller(0, 20 );
         assertEquals(0, game.score());

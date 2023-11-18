@@ -1,20 +1,18 @@
 package test.array;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
-import java.util.stream.IntStream;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
 
 public class CollectionTesting {
     @Test
     public void characterCount(){
         String s = "Kartheek";
-
         Comparator<Character> ch = (a, b) -> a.compareTo(b);
         Arrays.asList(s.toCharArray()).stream().limit(5).forEach(System.out::println);
-
-
     }
     @Test
     public void nothing(){
