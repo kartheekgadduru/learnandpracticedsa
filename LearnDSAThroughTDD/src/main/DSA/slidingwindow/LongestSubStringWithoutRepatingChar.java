@@ -35,4 +35,17 @@ public class LongestSubStringWithoutRepatingChar {
         }
         return sum;
     }
+
+    public int lengthOfLongestSubstring(String s) {
+        int left= 0, right = 0, result = 0;
+        int[] ch = new int[128];
+        for(right = 0; right < s.length(); right++){
+            ch[(int)s.charAt(right)]++;
+            while(ch[(int)s.charAt(right)] > 1){
+                ch[(int)s.charAt(left++)]--;
+            }
+            result = Math.max(result, right - left + 1);
+        }
+        return result;
+    }
 }
